@@ -1,0 +1,143 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --bs-btn: 0 0.55px 3px #424242,
+              0 0.75px 3px #000;
+
+    --bs-container: 3px 3px 3px #000;
+                    /*3px 3px 6px #424242*/
+
+    --clr-main: #fff;
+    --clr-light: #b08ea5;
+    --clr-dark: #241339;
+    --clr-accent: #04A8C2;
+    /*--clr-accent: #3f5e42;*/
+
+    --fw-h1: 700;
+    --fw-h2: 500;
+    --fw-p: 300;
+
+    --ff-primary: 'Zen Kaku Gothic New', sans-serif;
+    --ff-secondary: 'Work Sans', sans-serif;
+}
+
+body {
+    background-image: url('./pexels-steve-johnson-1509534.jpg');
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Typography */
+h1 { font-weight: var(--fw-h1); }
+h2 { font-weight: var(--fw-h2); }
+p { font-weight: var(--fw-p); }
+
+.section__title {
+    font-family: var(--ff-primary);
+}
+
+.section__subtitle {
+    font-family: var(--ff-secondary);
+}
+
+.section__body {
+    font-family: var(--ff-secondary);
+}
+
+/* Container */ 
+@media (min-width: 800px) {
+    .container {
+        width: 750px;
+        height: 750px;
+        box-shadow: var(--bs-container);
+        border: solid 2px;
+        border-radius: 4px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        margin: 3em;
+    }
+}
+
+.section {
+    padding: 2em;
+}
+
+/* Join Us section */
+.join-us {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background: var(--clr-main);
+    /*padding: 2em;*/
+}
+
+.join-us__title {
+    color: var(--clr-dark);
+    margin-bottom: 1em;
+}
+
+.join-us__subtitle {
+    color: var(--clr-accent);
+    margin-bottom: 0.5em;
+}
+
+/* Subscription section */
+.subscription {
+    grid-area: 'subscription';
+    background: var(--clr-light);
+    color: var(--clr-main);
+}
+
+.subscription button {
+    text-align: center;
+}
+
+.subscription__subtitle {
+    margin-bottom: 1em;
+}
+
+.subscription__price,
+.subscription__per-month {
+    margin-bottom: 0.5em;
+}
+
+.btn-wrapper {
+    text-align: center;
+    margin: 3em 0;
+}
+
+.sign-up__btn {
+    font-family: var(--ff-secondary);
+    font-weight: 900;
+    font-size: larger;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--clr-accent);
+    box-shadow: var(--bs-btn);
+    color: var(--clr-main);
+    padding: 1em;
+    width: 70%;
+    cursor: pointer;
+    transition: transform 50ms ease-in-out;
+}
+
+.sign-up__btn:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* Why Us section */
+.why-us {
+    grid-area: 'why-us';
+    background: var(--clr-dark);
+    color: var(--clr-main);
+}
+
+.why-us__subtitle {
+    margin-bottom: 1em;
+}
